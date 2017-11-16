@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h4>Catálogos</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @catalogues.each do |catalogue| %>
+      <tr>
+        <td><%= catalogue.name %></td>
+        <td class="action-icon"><%= link_to image_tag("view.png"), catalogue %></td>
+        <td class="action-icon"><%= link_to image_tag("edit.png"), edit_catalogue_path(catalogue)%></td>
+        <td class="action-icon"><%= link_to image_tag("delete.png"), catalogue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= paginate @catalogues %>
+<%= page_entries_info @catalogues %>
+<br>
+

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Areas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Catalogue</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @areas.each do |area| %>
+      <tr>
+        <td><%= area.name %></td>
+        <td><%= area.catalogue.name %></td>
+        <td class="action-icon"><%= link_to image_tag("view.png"), area %></td>
+        <td class="action-icon"><%= link_to image_tag("edit.png"), edit_area_path(area) %></td>
+        <td class="action-icon"><%= link_to image_tag("delete.png"), area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= paginate @areas %>
+<%= page_entries_info @areas %>
+
+<%= link_to 'New Area', new_area_path %>
