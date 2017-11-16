@@ -33,6 +33,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem "chromedriver-helper", "1.0.0"
   gem 'selenium-webdriver'
+  gem 'seed_dump'
 end
 
 group :development do
