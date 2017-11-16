@@ -1,0 +1,76 @@
+<div class="container">
+  <br>
+  <h4> Catálogos </h4>
+  <% if @catalogues.present? %>
+    <% @catalogues.each do |c| %>
+      <table>
+        <thead>
+          <th>Nombre:</th>
+          <th colspan="2"></th>
+        </thead>
+        <tbody>
+          <td><%= c.name %></td>
+          <td><%= link_to image_tag("view.png", class: "btn-img"), catalogue_path(c.id), class: 'btn btn-xs' %></td>
+          <td><%= link_to image_tag("edit.png", class: "btn-img"), edit_catalogue_path(c.id), class: 'btn btn-xs' %></td>
+        </tbody>
+      </table>
+      <br>
+    <% end %>
+  <% else %>
+    <h4> Nínguna coincidencia </h4>
+  <% end %>
+  <br><br>
+
+  <h4> Áreas </h4>
+  <% if @areas.present? %>
+    <% @areas.each do |a| %>
+      <table>
+        <thead>
+          <th>Nombre:</th>
+          <th colspan="2"></th>
+        </thead>
+        <tbody>
+          <td>
+            <%= a.name %>
+          </td>
+          <td>
+            <%= link_to image_tag("view.png", class: "btn-img"), area_path(a.id), class: 'btn btn-xs' %>
+          </td>
+          <td>
+            <%= link_to image_tag("edit.png", class: "btn-img"), edit_area_path(a.id), class: 'btn btn-xs' %>
+          </td>
+        </tbody>
+      </table>
+      <br>
+    <% end %>
+  <% else %>
+    <h4> Nínguna coincidencia </h4>
+  <% end %>
+  <br><br>
+
+  <h4> Items </h4>
+  <% if @items.present? %>
+    <% @items.each do |i| %>
+      <table>
+        <thead>
+          <th>Nombre:</th>
+          <th colspan="2"></th>
+        </thead>
+        <tbody>
+          <td>
+            <%= i.name %>
+          </td>
+          <td>
+            <%= link_to image_tag("view.png", class: "btn-img"), item_path(i.id), class: 'btn btn-xs' %>
+          </td>
+          <td>
+            <%= link_to image_tag("edit.png", class: "btn-img"), edit_item_path(i.id), class: 'btn btn-xs' %>
+          </td>
+        </tbody>
+      </table>
+      <br>
+    <% end %>
+  <% else %>
+    <h4> Nínguna coincidencia </h4>
+  <% end %>
+</div>

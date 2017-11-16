@@ -14,15 +14,30 @@
  *= require_self
  */
 
+/* General styles */
+
+.right{
+  float:right;
+}
+.left{
+  float: left;
+}
+.in-line{
+  display: inline-block;
+}
 .action-icon{
   width: 20%;
 }
-
 .action-icon img{
   width: 20%;
 }
-
 a:hover{
   text-decoration: none;
   background-color: transparent;
+}
+.btn-img{
+  width: 10%;
+}
+.add-link{
+  display: inline-block;
 }

@@ -2,5 +2,5 @@
 
 <%= render 'form', catalogue: @catalogue %>
 
-<%= link_to 'Show', @catalogue %> |
-<%= link_to 'Back', catalogues_path %>
+<%= link_to image_tag("view.png", class: "btn-img") + ' Mostrar', catalogue_path(@catalogue), class: "btn btn-xs" %> |
+<%= link_to image_tag("back.png", class: "btn-img") + ' Regresar', catalogues_path, class: "btn btn-xs" %>

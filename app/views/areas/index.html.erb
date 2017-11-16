@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Areas</h1>
-
+<h4 class="in-line">Areas</h4>
+<div class="add-link">
+  <%= link_to image_tag("add.png", class: "btn-img" ).html_safe + " Agregar área", new_area_path, class: "btn btn-xs" %>
+</div>
+<br><br>
 <table>
   <thead>
     <tr>
@@ -28,4 +31,3 @@
 <%= paginate @areas %>
 <%= page_entries_info @areas %>
 
-<%= link_to 'New Area', new_area_path %>

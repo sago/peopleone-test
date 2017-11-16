@@ -10,5 +10,5 @@
   <%= @catalogue.description %>
 </p>
 
-<%= link_to 'Edit', edit_catalogue_path(@catalogue) %> |
-<%= link_to 'Back', catalogues_path %>
+<%= link_to image_tag("edit.png", class: "btn-img") + ' Editar', edit_catalogue_path(@catalogue), class: "btn btn-xs" %> |
+<%= link_to image_tag("back.png", class: "btn-img") + ' Regresar', catalogues_path, class: "btn btn-xs" %>

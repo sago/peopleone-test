@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @area.name %>
 </p>
 
-<p>
-  <strong>Catalogue:</strong>
-  <%= @area.catalogue_id %>
+<p class="form-group">
+  <strong>Catálogo:</strong>
+  <div class="form-control"><%= @area.catalogue_id %></div>
 </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @area.description %>
+<p class="form-group">
+  <strong>Descripción:</strong>
+  <div class="from-control"><%= @area.description %></div>
 </p>
 
-<%= link_to 'Edit', edit_area_path(@area) %> |
-<%= link_to 'Back', areas_path %>
+<%= link_to image_tag("edit.png", class: "btn-img") + ' Editar', edit_area_path(@area), class: "btn btn-xs" %> |
+<%= link_to image_tag("back.png", class: "btn-img") + ' Regresar', areas_path, class: "btn btn-xs" %>

@@ -2,5 +2,5 @@
 
 <%= render 'form', area: @area %>
 
-<%= link_to 'Show', @area %> |
-<%= link_to 'Back', areas_path %>
+<%= link_to image_tag("view.png", class: "btn-img") + ' Mostrar', area_path(@area), class: "btn btn-xs" %> |
+<%= link_to image_tag("back.png", class: "btn-img") + ' Regresar', areas_path, class: "btn btn-xs" %>

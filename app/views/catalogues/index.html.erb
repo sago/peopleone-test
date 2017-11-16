@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h4>Catálogos</h4>
-
+<h4 class="in-line">Catálogos</h4>
+<div class="add-link">
+  <%= link_to image_tag("add.png", class: "btn-img" ).html_safe + " Agregar catálogo", new_catalogue_path, class: "btn btn-xs" %>
+</div>
+<br><br>
 <table>
   <thead>
     <tr>
@@ -26,5 +29,4 @@
 
 <%= paginate @catalogues %>
 <%= page_entries_info @catalogues %>
-<br>
 

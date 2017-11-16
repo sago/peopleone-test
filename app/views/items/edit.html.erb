@@ -2,5 +2,5 @@
 
 <%= render 'form', item: @item %>
 
-<%= link_to 'Show', @item %> |
-<%= link_to 'Back', items_path %>
+<%= link_to image_tag("view.png", class: "btn-img") + ' Mostrar', item_path(@item), class: "btn btn-xs" %> |
+<%= link_to image_tag("back.png", class: "btn-img") + ' Regresar', items_path, class: "btn btn-xs" %>

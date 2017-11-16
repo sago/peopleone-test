@@ -11,19 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :area_name %>
+  <div class="field form-group">
+    <%= form.label "Nombre:" %>
+    <%= form.text_field :name, id: :area_name, class: "form-control"  %>
   </div>
 
-  <div class="field">
-    <%= form.label :catalogue_id %>
-    <%= form.select :catalogue_id, Catalogue.all.collect { |c| [ c.name, c.id ] } %>
+  <div class="field form-group">
+    <%= form.label "Catálogo:" %>
+    <%= form.select :catalogue_id, Catalogue.all.collect { |c| [ c.name, c.id ] }, class: "form-control form-control-sm"  %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :area_description %>
+  <div class="field form-group">
+    <%= form.label "Descripcioón:" %>
+    <%= form.text_area :description, id: :area_description, class: "form-control"  %>
   </div>
 
   <div class="actions">

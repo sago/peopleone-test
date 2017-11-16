@@ -3,5 +3,8 @@ Rails.application.routes.draw do
   resources :items
   resources :areas
   resources :catalogues
+  # General Search
+  post "/search"    =>  "home#search"
+
   root "catalogues#index"
 end
